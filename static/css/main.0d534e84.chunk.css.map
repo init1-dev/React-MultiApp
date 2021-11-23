@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack://src/components/02-useEffect/effects.css"],"names":[],"mappings":"AAAA,KACI,YACJ,CAEA,YACI,gBACJ","file":"main.0d534e84.chunk.css","sourcesContent":["body {\r\n    padding: 70px;\r\n}\r\n\r\n.form-group {\r\n    padding: 0px 0px 10px 0px;\r\n}"]}
