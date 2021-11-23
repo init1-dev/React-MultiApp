@@ -14,7 +14,7 @@ export const QuoteControl = ({ data, loading, length } ) => {
 
     return (
         <div>
-            <h1>{ length.current } Breaking Bad Quotes [{ counter + 1 }]</h1>
+            <h1>&gt;&gt; { length.current || '' } Breaking Bad Quotes [{ counter + 1 }]</h1>
             <hr />
 
             { loading &&
@@ -26,7 +26,7 @@ export const QuoteControl = ({ data, loading, length } ) => {
             { !loading &&
                     <>
                         <blockquote className="blockquote text-end">
-                            <p> { quote } </p>
+                            <p className="quote"> { quote } </p>
                             <footer className="blockquote-footer"> { author } </footer>
                         </blockquote>
                         

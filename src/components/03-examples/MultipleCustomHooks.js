@@ -9,12 +9,12 @@ export const MultipleCustomHooks = () => {
     const { data, loading } = state;
 
     return (
-        <>
+        <div className="mt-3">
             <QuoteControl
                 data={ data }
                 loading={ loading }
                 length={ length }
             />
-        </>
+        </div>
     )
 }

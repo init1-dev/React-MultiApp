@@ -7,20 +7,18 @@ export const RealExampleRef = () => {
 
     return (
         <div>
-            <h1>React-QuotesApp</h1>
-            <hr />
+            <h1>React-QuotesApp <button
+                                    className="btn btn-warning ms-3"
+                                    onClick={ () => {
+                                        setShow( !show );
+                                    }}
+                                >
+                                    Show/Hide Quotes
+                                </button>
+            </h1>
 
             { show && <MultipleCustomHooks />}
 
-            <button
-                className="btn btn-primary mt-3"
-                onClick={ () => {
-                    setShow( !show );
-                }}
-            >
-                Show/Hide Quotes
-            </button>
-
         </div>
     )
-}
+};
