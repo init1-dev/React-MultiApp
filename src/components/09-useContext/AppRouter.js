@@ -23,13 +23,13 @@ export const AppRouter = () => {
                 <NavBar />
 
                 <Routes>
-                    <Route path="/" element={ <HomeScreen /> } />
-                    <Route path="/about" element={ <AboutScreen /> } />
-                    <Route path="/login" element={ <LoginScreen /> } />
-                    <Route path="/quotes" element={ <RealExampleRef /> } />
-                    <Route path="/todo" element={ <TodoApp /> } />
+                    <Route path="/React-MultiApp/" element={ <HomeScreen /> } />
+                    <Route path="/React-MultiApp/about" element={ <AboutScreen /> } />
+                    <Route path="/React-MultiApp/login" element={ <LoginScreen /> } />
+                    <Route path="/React-MultiApp/quotes" element={ <RealExampleRef /> } />
+                    <Route path="/React-MultiApp/todo" element={ <TodoApp /> } />
                     
-                    <Route path="*" element={ <Navigate replace to='/' /> } />
+                    <Route path="*" element={ <Navigate replace to="/React-MultiApp/" /> } />
                 </Routes>
 
             </div>
