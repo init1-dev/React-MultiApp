@@ -6,7 +6,7 @@ export const RealExampleRef = () => {
     const [show, setShow] = useState(false);
 
     return (
-        <div>
+        <div className="quotesApp">
             <h1>React-QuotesApp <button
                                     className="btn btn-warning ms-3"
                                     onClick={ () => {

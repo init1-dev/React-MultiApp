@@ -3,8 +3,8 @@ import { todoReducer } from './todoReducer';
 
 import { TodoList } from './TodoList';
 import { TodoAdd } from './TodoAdd';
-import { RealExampleRef } from '../04-useRef/RealExampleRef';
-
+// import { RealExampleRef } from '../04-useRef/RealExampleRef';
+import { handleAddTodo, handleDeleteToDo, handleToggle } from '../../helpers/TodoFuncActions';
 
 const init = () => {
     return JSON.parse( localStorage.getItem('todos') ) || [];
@@ -18,47 +18,26 @@ export const TodoApp = () => {
         localStorage.setItem('todos', JSON.stringify( todos ));
     }, [ todos ]);
 
-    const handleAddTodo = ( newTodo ) => {
-        dispatch({
-            type: 'add',
-            payload: newTodo
-        });
-    };
-
-    const handleDeleteToDo = ( todoId ) => {
-        dispatch({
-            type: 'delete',
-            payload: todoId
-        });
-    };
-
-    const handleToggle = ( todoId ) => {
-        dispatch({
-            type: 'toggle',
-            payload: todoId
-        });
-    };
-
     return (
-        <div>
+        <div className="mt2">
             <h1>TodoApp ( { todos.length } { todos.length === 1 ? 'Nota' : 'Notas'} ) </h1>
             <hr />
             <div className="row">
                 <div className="col-7">
                     <TodoList
                         todos={ todos }
-                        handleDeleteToDo={ handleDeleteToDo }
-                        handleToggle={ handleToggle }
+                        handleDeleteToDo={ (e) => dispatch( handleDeleteToDo(e) )}
+                        handleToggle={ (e) => dispatch( handleToggle(e) )}
                     />
                 </div>
                 <div className="col-5">
                     <TodoAdd
-                        handleAddTodo={ handleAddTodo }
+                        handleAddTodo={ (e) => dispatch( handleAddTodo(e) )}
                     />
                 </div>
             </div>
             <div className="quotesApp">
-                <RealExampleRef />
+                {/* <RealExampleRef /> */}
             </div>
         </div>
     )

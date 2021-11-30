@@ -11,6 +11,14 @@ p {
     margin-top: 2.5rem;
 }
 
+.mt2 {
+    margin-top: 2rem;
+}
+
+.navbar {
+    border-radius: 1rem;
+}
+
 .quote {
     margin: 0px 0px 15px 0px;
 }
