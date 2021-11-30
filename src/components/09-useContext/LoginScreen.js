@@ -5,13 +5,12 @@ export const LoginScreen = () => {
 
     // 1. Obtener la referencia al userContext
     const { user, setUser } = useContext(UserContext);
+
     const isAuth = () => {
         return Object.keys(user).length === 0
             ? false
             : true
     };
-
-    // console.log(isAuth());
 
     const handleLogIn = () => {
         setUser({

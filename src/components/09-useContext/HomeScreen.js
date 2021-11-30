@@ -13,7 +13,7 @@ export const HomeScreen = () => {
             <hr />
 
             <pre> Esto es un mensaje en la sección de bienvenida. </pre>
-            <pre> Usuario activo: { user.name || 'Nadie' } </pre>
+            <pre> Usuario activo: { user.name || '<none>' } </pre>
             
         </div>
     )

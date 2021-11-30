@@ -1,6 +1,6 @@
 # React-QuotesApp
 
-Simple quotes app using React and Breaking bad API
+Simple React multiapp made for educational purposes, includes ToDo list, Quotes and some other apps all in one.
 
 <!-- # Getting Started with Create React App
 
