@@ -9,7 +9,7 @@ export const TodoListItem = ({ todo, index, handleDeleteToDo, handleToggle }) =>
             className="list-group-item"
         >
             <p
-                className={`${ done && 'complete' }`}
+                className={`listItem ${ done && 'complete' }`}
                 onClick={ () => handleToggle( id ) }
             >
                 { index + 1 }. { desc } [ {done ? 'Done' : 'Pending'} ]

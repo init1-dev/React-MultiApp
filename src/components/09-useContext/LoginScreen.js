@@ -26,19 +26,21 @@ export const LoginScreen = () => {
 
     return (
         <div className="mt2">
-            <h1>Login Section</h1>
+            <h1>Login Section
+                <button
+                    className={ `btn ms-4 ${ isAuth() ? 'btn btn-warning' : 'btn btn-primary' }` }
+                    onClick={ isAuth() ? handleLogOut : handleLogIn }
+                >
+                    { isAuth() ? 'Logout' : 'Login' }
+                </button>
+            </h1>
             <hr />
-
+            <p> { isAuth() ? 'Usuario correcto' : 'No hay datos de usuario' } </p>
+            <br />
             <pre>
                 userData: { JSON.stringify( user, null, 3 ) }
             </pre>
 
-            <button
-                className={ isAuth() ? 'btn btn-warning' : 'btn btn-primary' }
-                onClick={ isAuth() ? handleLogOut : handleLogIn }
-            >
-                { isAuth() ? 'Logout' : 'Login' }
-            </button>
         </div>
     )
 };

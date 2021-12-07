@@ -4,15 +4,15 @@ body {
 
 p {
     margin: 0px;
-    cursor: pointer;
 }
 
-.quotesApp {
-    margin-top: 2.5rem;
+.listItem {
+    cursor: pointer;
 }
 
 .mt2 {
     margin-top: 2rem;
+    margin-left: 1rem;
 }
 
 .navbar {
