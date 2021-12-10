@@ -32,3 +32,82 @@ p {
 .complete {
     text-decoration: line-through;
 }
+
+/* GifExpertApp CSS */
+
+* {
+    font-family: Helvetica, Arial, sans-serif;
+  }
+  
+  body {
+    padding: 25px;
+  }
+  
+  input {
+    color: grey;
+    font-size: 1rem;
+    width: 100%;
+  }
+  
+  h2.title {
+    margin: 0 0 15px 0;
+  }
+  
+  .card-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+  }
+  
+  .card {
+    /* Miler */
+    align-items: center;
+    box-shadow: 0.1rem 0.1rem 0.1rem #aaa;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.5s;
+  
+    /* Vanilla */
+    align-content: center;
+    border: 1px solid grey;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    overflow: hidden;
+  }
+  
+  .card:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0.5rem 0.5rem 0.5rem #aaa;
+  }
+  
+  .card p {
+    font-size: xx-small;
+    padding: 5px;
+    text-align: center;
+  }
+  
+  .card img {
+    max-height: 200px;
+  }
+  
+  /* Botones de las categorías */
+  
+  .cat-btnDel {
+    color: red;
+    display: inline-flex;
+    flex-direction: row;
+    font-size: 0.8rem;
+    font-weight: 900;
+    height: 1.5rem;
+    justify-content: center;
+    margin-left: 10px;
+    width: 2.5rem;
+  }
+  
+  .search-sub {
+    font-size: 0.8rem;
+    margin-left: 1rem;
+  }

@@ -18,7 +18,7 @@ import ReactDOM from 'react-dom';
 // import { TodoApp } from './components/08-useReducer/TodoApp';
 import { MainApp } from './components/09-useContext/MainApp';
 
-import './components/08-useReducer/effects.css';
+import './main.css';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -26,4 +26,3 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
-

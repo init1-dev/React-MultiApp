@@ -16,6 +16,7 @@ import { LoginScreen } from './LoginScreen';
 import { RealExampleRef } from '../04-useRef/RealExampleRef';
 import { TodoApp } from '../08-useReducer/TodoApp';
 import { Error404 } from './404';
+import GifExpertApp from '../GifExpertApp/GifExpertApp';
 
 export const AppRouter = () => {
     return (
@@ -29,6 +30,7 @@ export const AppRouter = () => {
                     <Route path="/" element={ <HomeScreen /> } />
                     <Route path="/about" element={ <AboutScreen /> } />
                     <Route path="/login" element={ <LoginScreen /> } />
+                    <Route path="/gifs" element={ <GifExpertApp /> } />
                     <Route path="/quotes" element={ <RealExampleRef /> } />
                     <Route path="/todo" element={ <TodoApp /> } />
                     
