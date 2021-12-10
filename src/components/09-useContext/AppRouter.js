@@ -1,9 +1,9 @@
 import React from 'react';
 import {
-    BrowserRouter as Router,
     Routes,
     Route,
-    Navigate
+    Navigate,
+    HashRouter
     // Link
   } from 'react-router-dom';
   
@@ -17,22 +17,22 @@ import { TodoApp } from '../08-useReducer/TodoApp';
 
 export const AppRouter = () => {
     return (
-        <Router>
+        <HashRouter>
             <div>
 
                 <NavBar />
 
                 <Routes>
-                    <Route path="/React-MultiApp/" element={ <HomeScreen /> } />
-                    <Route path="/React-MultiApp/about" element={ <AboutScreen /> } />
-                    <Route path="/React-MultiApp/login" element={ <LoginScreen /> } />
-                    <Route path="/React-MultiApp/quotes" element={ <RealExampleRef /> } />
-                    <Route path="/React-MultiApp/todo" element={ <TodoApp /> } />
+                    <Route path="/" element={ <HomeScreen /> } />
+                    <Route path="/about" element={ <AboutScreen /> } />
+                    <Route path="/login" element={ <LoginScreen /> } />
+                    <Route path="/quotes" element={ <RealExampleRef /> } />
+                    <Route path="/todo" element={ <TodoApp /> } />
                     
-                    <Route path="*" element={ <Navigate replace to="/React-MultiApp/" /> } />
+                    <Route path="*" element={ <Navigate replace to="/" /> } />
                 </Routes>
 
             </div>
-        </Router>
+        </HashRouter>
     )
 };

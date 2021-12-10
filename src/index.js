@@ -21,7 +21,9 @@ import { MainApp } from './components/09-useContext/MainApp';
 import './components/08-useReducer/effects.css';
 
 ReactDOM.render(
-  <MainApp />,
+  <React.StrictMode>
+    <MainApp />
+  </React.StrictMode>,
   document.getElementById('root')
 );
 
