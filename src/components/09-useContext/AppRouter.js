@@ -1,9 +1,10 @@
 import React from 'react';
 import {
+    // BrowserRouter as Router,
     Routes,
     Route,
-    Navigate,
-    HashRouter
+    // Navigate,
+    HashRouter,
     // Link
   } from 'react-router-dom';
   
@@ -14,9 +15,11 @@ import { HomeScreen } from './HomeScreen';
 import { LoginScreen } from './LoginScreen';  
 import { RealExampleRef } from '../04-useRef/RealExampleRef';
 import { TodoApp } from '../08-useReducer/TodoApp';
+import { Error404 } from './404';
 
 export const AppRouter = () => {
     return (
+        // HashRouter para que las rutas funcionen en GitHub Pages, con BrowserRouter dan error 404
         <HashRouter>
             <div>
 
@@ -29,7 +32,8 @@ export const AppRouter = () => {
                     <Route path="/quotes" element={ <RealExampleRef /> } />
                     <Route path="/todo" element={ <TodoApp /> } />
                     
-                    <Route path="*" element={ <Navigate replace to="/" /> } />
+                    {/* <Route path="*" element={ <Navigate replace to="/" /> } /> */}
+                    <Route path="*" element={ <Error404 /> } />
                 </Routes>
 
             </div>

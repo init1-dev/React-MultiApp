@@ -17,6 +17,7 @@ export const NavBar = () => {
                         <NavLink to="/login" className="nav-link"> Login </NavLink>
                         <NavLink to="/quotes" className="nav-link"> Quotes </NavLink>
                         <NavLink to="/todo" className="nav-link"> ToDo </NavLink>
+                        <NavLink to="/error" className="nav-link"> |&emsp;Forzar 404&emsp;|</NavLink>
                     </div>
                 </div>
                 
