@@ -1,7 +1,7 @@
 import React from 'react';
 import { useForm } from '../../hooks/useForm';
 
-export const TodoAdd = ({ handleAddTodo }) => {
+export const TodoAdd = ({ handleAdd }) => {
 
     const [ { description }, handleInputChange, reset ] = useForm({
         description: ''
@@ -21,7 +21,7 @@ export const TodoAdd = ({ handleAddTodo }) => {
             done: false
         };
 
-        handleAddTodo( newTodo );
+        handleAdd( newTodo );
         reset();
 
     }

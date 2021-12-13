@@ -1,20 +1,20 @@
-export const handleAddTodo = ( newTodo ) => {
+export const handleAdd = ( newItem ) => {
     return {
         type: 'add',
-        payload: newTodo
+        payload: newItem
     };
 };
 
-export const handleDeleteToDo = ( todoId ) => {
+export const handleDelete = ( deletedItem ) => {
     return {
         type: 'delete',
-        payload: todoId
+        payload: deletedItem
     };
 };
 
-export const handleToggle = ( todoId ) => {
+export const handleToggle = ( toggledItem ) => {
     return {
         type: 'toggle',
-        payload: todoId
+        payload: toggledItem
     };
 };

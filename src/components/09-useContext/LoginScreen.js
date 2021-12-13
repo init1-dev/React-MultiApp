@@ -1,10 +1,14 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { UserContext } from './UserContext';
 
 export const LoginScreen = () => {
 
     // 1. Obtener la referencia al userContext
     const { user, setUser } = useContext(UserContext);
+
+    useEffect(() => {
+        localStorage.setItem('login', JSON.stringify(user));
+    }, [user]);
 
     const isAuth = () => {
         return Object.keys(user).length === 0

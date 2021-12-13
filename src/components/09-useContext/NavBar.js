@@ -14,11 +14,11 @@ export const NavBar = () => {
                         {/* <NavLink to="/" className={ ({isActive}) => `nav-link ${ (isActive) ? 'active' : '' }` }> Home </NavLink> */}
                         <NavLink to="/" className="nav-link"> Home </NavLink>
                         <NavLink to="/about" className="nav-link"> About </NavLink>
-                        <NavLink to="/login" className="nav-link"> Login </NavLink>
                         <NavLink to="/gifs" className="nav-link"> GifExpertApp </NavLink>
                         <NavLink to="/quotes" className="nav-link"> Quotes </NavLink>
                         <NavLink to="/todo" className="nav-link"> ToDo </NavLink>
                         <NavLink to="/error" className="nav-link"> |&emsp;Forzar 404&emsp;|</NavLink>
+                        <NavLink to="/login" className="nav-link"> Login </NavLink>
                     </div>
                 </div>
                 

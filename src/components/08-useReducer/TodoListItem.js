@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const TodoListItem = ({ todo, index, handleDeleteToDo, handleToggle }) => {
+export const TodoListItem = ({ todo, index, handleDelete, handleToggle }) => {
     const { id, desc, done } = todo;
     return (
         <li
@@ -16,7 +16,7 @@ export const TodoListItem = ({ todo, index, handleDeleteToDo, handleToggle }) =>
             </p>
             <button
                 className="btn btn-danger"
-                onClick={ () => handleDeleteToDo( id ) }
+                onClick={ () => handleDelete( id ) }
             >
                 Borrar
             </button>
@@ -27,6 +27,6 @@ export const TodoListItem = ({ todo, index, handleDeleteToDo, handleToggle }) =>
 TodoListItem.propTypes = {
     todo: PropTypes.object.isRequired,
     index: PropTypes.number.isRequired,
-    handleDeleteToDo: PropTypes.func.isRequired,
+    handleDelete: PropTypes.func.isRequired,
     handleToggle: PropTypes.func.isRequired
 }

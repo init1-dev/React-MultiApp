@@ -4,7 +4,11 @@ import { UserContext } from './UserContext';
 
 export const MainApp = () => {
 
-    const [user, setUser] = useState({});
+    const init = () => {
+        return JSON.parse( localStorage.getItem('login') ) || [];
+    };
+
+    const [user, setUser] = useState(init);
 
     return (
         <UserContext.Provider value={{

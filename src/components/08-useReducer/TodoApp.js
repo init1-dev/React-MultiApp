@@ -4,7 +4,7 @@ import { todoReducer } from './todoReducer';
 import { TodoList } from './TodoList';
 import { TodoAdd } from './TodoAdd';
 // import { RealExampleRef } from '../04-useRef/RealExampleRef';
-import { handleAddTodo, handleDeleteToDo, handleToggle } from '../../helpers/TodoFuncActions';
+import { handleAdd, handleDelete, handleToggle } from '../../helpers/TodoFuncActions';
 
 const init = () => {
     return JSON.parse( localStorage.getItem('todos') ) || [];
@@ -26,18 +26,15 @@ export const TodoApp = () => {
                 <div className="col-7">
                     <TodoList
                         todos={ todos }
-                        handleDeleteToDo={ (e) => dispatch( handleDeleteToDo(e) )}
+                        handleDelete={ (e) => dispatch( handleDelete(e) )}
                         handleToggle={ (e) => dispatch( handleToggle(e) )}
                     />
                 </div>
                 <div className="col-5">
                     <TodoAdd
-                        handleAddTodo={ (e) => dispatch( handleAddTodo(e) )}
+                        handleAdd={ (e) => dispatch( handleAdd(e) )}
                     />
                 </div>
-            </div>
-            <div className="quotesApp">
-                {/* <RealExampleRef /> */}
             </div>
         </div>
     )

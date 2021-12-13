@@ -29,10 +29,10 @@ export const AppRouter = () => {
                 <Routes>
                     <Route path="/" element={ <HomeScreen /> } />
                     <Route path="/about" element={ <AboutScreen /> } />
-                    <Route path="/login" element={ <LoginScreen /> } />
                     <Route path="/gifs" element={ <GifExpertApp /> } />
                     <Route path="/quotes" element={ <RealExampleRef /> } />
                     <Route path="/todo" element={ <TodoApp /> } />
+                    <Route path="/login" element={ <LoginScreen /> } />
                     
                     {/* <Route path="*" element={ <Navigate replace to="/" /> } /> */}
                     <Route path="*" element={ <Error404 /> } />

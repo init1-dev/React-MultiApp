@@ -1,10 +1,18 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import CategoryAdd from './components/CategoryAdd';
 import { GifGrid } from './components/GifGrid';
 
+const init = () => {
+    return JSON.parse( localStorage.getItem('categories') ) || [];
+};
+
 const GifExpertApp = ({ defaultCategories = [] }) => {
 
-    const [ categories, setCategories ] = useState( defaultCategories );
+    const [ categories, setCategories ] = useState( init );
+
+    useEffect(() => {
+        localStorage.setItem('categories', JSON.stringify( categories ));
+    }, [ categories ]);
 
     return (
         <div className="mt2">

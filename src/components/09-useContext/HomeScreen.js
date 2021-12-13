@@ -16,7 +16,7 @@ export const HomeScreen = () => {
             <br />
             <p>Si hay un usuario activo, se mostrará a continuación, en caso contrario el Usuario activo será 'none'. Para activar un usuario ve a la sección 'Login'.</p>
             <br />
-            <pre>Usuario activo: { user.name || '<none>' }</pre>
+            <pre>Usuario activo: <strong>{ user.name || '<none>' }</strong></pre>
             
         </div>
     )

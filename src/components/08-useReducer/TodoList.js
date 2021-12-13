@@ -2,7 +2,8 @@ import React from 'react'
 import { TodoListItem } from './TodoListItem';
 import PropTypes from 'prop-types';
 
-export const TodoList = ({ todos, handleDeleteToDo, handleToggle }) => {
+export const TodoList = ({ todos, handleDelete, handleToggle }) => {
+    // console.log(handleDelete);
     return (
         <ul className="list-group list-group-flush">
             {
@@ -12,7 +13,7 @@ export const TodoList = ({ todos, handleDeleteToDo, handleToggle }) => {
                         key={ todo.id }
                         todo={ todo }
                         index={ i }
-                        handleDeleteToDo={ handleDeleteToDo }
+                        handleDelete={ handleDelete }
                         handleToggle={ handleToggle }
                     />
                 ))
@@ -23,6 +24,6 @@ export const TodoList = ({ todos, handleDeleteToDo, handleToggle }) => {
 
 TodoList.propTypes = {
     todos: PropTypes.array.isRequired,
-    handleDeleteToDo: PropTypes.func.isRequired,
+    handleDelete: PropTypes.func.isRequired,
     handleToggle: PropTypes.func.isRequired
 }
